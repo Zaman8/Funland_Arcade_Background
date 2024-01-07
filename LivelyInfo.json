@@ -7,8 +7,8 @@
   "Contact": "",
   "Type": 1,
   "FileName": "index.html",
-  "Thumbnail": "background.jpg",
-  "Preview": null,
+  "Thumbnail": "background.jpeg",
+  "Preview": "background.jpeg",
   "Arguments": "--system-nowplaying",
   "IsAbsolutePath": false
 }

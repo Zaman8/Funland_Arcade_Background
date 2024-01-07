@@ -17,6 +17,6 @@ function livelyCurrentTrack(data) {
       }
     } else {
       audioViz.style.visibility = "hidden";
-      albumCover.src = "chiptuneCover_MarkSoto.jpg"
+      albumCover.src = "placeholderAlbumArt.jpg"
     }
   }

@@ -40,11 +40,22 @@
             }
 
             #AudioViz {
-                  position: fixed;
-                  visibility: hidden;
-                  bottom: 4rem;
-                  right: 5rem;
+                  visibility: visible;
+                  position: absolute;
                   z-index: 1;
+
+            }
+
+            #albumPic {
+                  position: fixed;
+                  bottom: 29.5rem;
+                  right: 9.45rem;
+                  object-fit: cover;
+
+                  height: 127px;
+                  width: 155px;
+                  transform: perspective(200px) rotate3D(1, 0, 0, 8deg);
+                  border-radius: 25px;
             }
       </style>
       
@@ -54,12 +65,12 @@
       <div class="container">
             
             <div id="AudioViz">
-                  <img id="albumPic", src ="chiptuneCover_MarkSoto.jpg"/>
+                  <img id="albumPic", src ="placeholderAlbumArt.jpg"/>
             </div>
             <img id="Background", src="background.jpeg"/>
       </div>
 
       <!-- Load JS Scripts after creating and rendering HTML elements -->
-      <script src="js/viz.js"></script>
+      <script src="viz.js"></script>
 </body>
 </html>
