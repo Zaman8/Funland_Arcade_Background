@@ -1,0 +1,12 @@
+{
+  "AppVersion": "1.0.0.0",
+  "Title": "Funland Arcade",
+  "Desc": "Steven Universe Funland Arcade live wallpaper",
+  "Author": "zaman",
+  "License": "GNUPv3",
+  "Contact": "",
+  "Type": 1,
+  "FileName": "index.html",
+  "Arguments": "--system-nowplaying",
+  "IsAbsolutePath": false
+}
