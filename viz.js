@@ -3,7 +3,7 @@ const audioViz = document.getElementById('AudioViz');
 
 //Handle setting Audio info Display
 
-const albumCover = document.getElementById('albumPic');
+const albumCover = document.getElementById('sourceImage');
 
 function livelyCurrentTrack(data) {
     let obj = JSON.parse(data);
