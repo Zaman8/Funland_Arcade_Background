@@ -3,7 +3,8 @@ const audioViz = document.getElementById('AudioViz');
 
 //Handle setting Audio info Display visible 
 
-const albumCover = document.getElementById('sourceImage');
+const albumCover = document.getElementById('albumImage');
+const artistTitle = document.getElementById('artistName');
 
 function livelyCurrentTrack(data) {
     let obj = JSON.parse(data);
@@ -15,6 +16,7 @@ function livelyCurrentTrack(data) {
       {
         albumCover.src = "data:image/png;base64, " + obj.Thumbnail;
       }
+      artistTitle.innerText = obj.Artist;
     } else {
       audioViz.style.visibility = "hidden";
       albumCover.src = "placeholderAlbumArt.jpg"
