@@ -24,9 +24,7 @@ function livelyCurrentTrack(data) {
 let canvas = document.getElementById("visualizer");
 let max_height, startPos, vizWidth, midY;
 
-let linesColor = "rgb(255,255,255)";
-let backgroundColor = "rbg(255,255,255)"
-let square = false;
+let linesColor = "rgb(255,240,253)";
 
 let ctx = canvas.getContext("2d");
 
@@ -43,6 +41,7 @@ window.onload = () => {
 
 function livelyAudioListener(audioArray) 
 {
+  //ensure that max value is actually 1 (usually is)
   maxVal = 1;
   for (var x of audioArray) {
     if (x > maxVal) maxVal = x;
@@ -53,6 +52,8 @@ function livelyAudioListener(audioArray)
 
   ctx.beginPath();
   ctx.lineJoin = "round";
+
+  //begin drawing lines
   ctx.moveTo(startPos - offSet * 3, midY);
   ctx.lineTo(startPos, midY);
   let posInLine = -1;
@@ -62,15 +63,11 @@ function livelyAudioListener(audioArray)
       startPos + offSet * posInLine,
       midY - (audioArray[x] / maxVal) * max_height
     );
-    if (square)
-      ctx.lineTo(
-        startPos + offSet * (posInLine + 1),
-        midY - (audioArray[x] / maxVal) * max_height
-      );
   }
-  ctx.lineTo(startPos + offSet * (posInLine + (square ? 1 : 0)), midY);
-  ctx.lineTo(startPos + offSet * (posInLine + (square ? 4 : 3)), midY);
+  ctx.lineTo(startPos + offSet * (posInLine + 0), midY);
+  ctx.lineTo(startPos + offSet * (posInLine + 3), midY);
 
+  //execute render of lines
   renderLine(linesColor);
 }
 
