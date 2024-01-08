@@ -69,6 +69,12 @@
                   background: url(noise.svg);
             }
 
+            #visualizer {
+                  position: absolute;
+                  height: 127px;
+                  width: 155px;
+            }
+
       </style>
       
 </head>
@@ -80,12 +86,13 @@
                   <div id="albumPic">
                         <img id="sourceImage", class="pic", src ="placeholderAlbumArt.jpg"/>
                         <div class="pic noise"></div>
+                        <canvas id="visualizer"></canvas>
                   </div>
             </div>
             <img id="Background", src="background.jpeg"/>
       </div>
 
       <!-- Load JS Scripts after creating and rendering HTML elements -->
-      <script src="viz.js"></script>
+      <script src="musichandler.js"></script>
 </body>
 </html>

@@ -9,6 +9,6 @@
   "FileName": "index.html",
   "Thumbnail": "background.jpeg",
   "Preview": "background.jpeg",
-  "Arguments": "--system-nowplaying",
+  "Arguments": "--system-nowplaying --audio",
   "IsAbsolutePath": false
 }
