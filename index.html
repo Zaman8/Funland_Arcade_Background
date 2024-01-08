@@ -9,6 +9,13 @@
       <meta name="viewport" content="width=device-width, initial-scale=1">
 
       <style>
+
+            @font-face {
+                  font-family: 'BrokenDreams';
+                  src: url(fonts/BrokenDreams.ttf) format('truetype');
+                  src: url(fonts/BrokenDreams.otf);
+            }
+
             * {
                   margin: 0;
                   padding: 0;
@@ -41,7 +48,7 @@
 
             #AudioViz {
                   visibility: visible;
-                  position: absolute;
+                  position: relative;
                   z-index: 1;
 
             }
@@ -77,6 +84,31 @@
                   transform: translate(0px, 32px) perspective(200px) rotate3D(1, 0, 0, 8deg);
             }
 
+            #MusicInfo {
+                  position: fixed;
+                  top: 48%;
+                  right: 13%;
+                  transform: rotate(-70deg);
+
+                  text-overflow: ellipsis;
+                  white-space: nowrap;
+                  overflow: hidden;
+
+                  text-align: center;
+                  letter-spacing: 0.1rem;
+                  font-family: 'BrokenDreams';
+                  color: #da6b60;
+                  font-size: larger;
+
+
+            }
+
+            #artistName {
+                  max-width: 250px;
+                  text-overflow: inherit;
+                  overflow: inherit;
+            }
+
       </style>
       
 </head>
@@ -89,6 +121,9 @@
                         <img id="sourceImage", class="pic", src ="placeholderAlbumArt.jpg"/>
                         <div class="pic noise"></div>
                         <canvas id="visualizer"></canvas>
+                  </div>
+                  <div id="MusicInfo">
+                        <h1 id="artistName">Steven Universe</h1>
                   </div>
             </div>
             <img id="Background", src="background.jpeg"/>
