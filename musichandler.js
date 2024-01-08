@@ -25,20 +25,16 @@ let canvas = document.getElementById("visualizer");
 let max_height, startPos, vizWidth, midY;
 
 let linesColor = "rgb(255,255,255)";
-let backgroundColor = "rbga(0,0,0,0)"
+let backgroundColor = "rbg(255,255,255)"
 let square = false;
 
 let ctx = canvas.getContext("2d");
 
 function setSize() {
-  max_height = canvas.height * 0.5;
+  max_height = canvas.height * 0.75;
   startPos = canvas.width * 0.1;
   vizWidth = canvas.width * 0.8;
   midY = canvas.height - canvas.height / 4;
-  gradient = ctx.createLinearGradient(0,midY, 0, max_height);
-  gradient.addColorStop(0, backgroundColor);
-  gradient.addColorStop(1, linesColor);
-
 }
 
 window.onload = () => {
@@ -53,7 +49,6 @@ function livelyAudioListener(audioArray)
   }
 
   const offSet = vizWidth / audioArray.length;
-  ctx.fillstyle = backgroundColor;
   ctx.clearRect(0, 0, canvas.width, canvas.height);
 
   ctx.beginPath();
@@ -76,7 +71,6 @@ function livelyAudioListener(audioArray)
   ctx.lineTo(startPos + offSet * (posInLine + (square ? 1 : 0)), midY);
   ctx.lineTo(startPos + offSet * (posInLine + (square ? 4 : 3)), midY);
 
-  ctx.fill();
   renderLine(linesColor);
 }
 
