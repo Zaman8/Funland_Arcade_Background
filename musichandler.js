@@ -15,6 +15,8 @@ function livelyCurrentTrack(data) {
       if (obj.Thumbnail != null)
       {
         albumCover.src = "data:image/png;base64, " + obj.Thumbnail;
+      } else {
+        albumCover.src = "placeholderAlbumArt.jpg"
       }
       artistTitle.innerText = obj.Artist;
     } else {
