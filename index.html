@@ -110,6 +110,30 @@
                   overflow: inherit;
             }
 
+            #Clock {
+                  position: relative;
+                  z-index: 1;
+            }
+
+            .clockHands {
+                  border-radius: 0.1rem;
+                  height: 0.2rem;
+                  transform-origin: center left;
+                  background-color: #270e46;
+
+                  position: fixed;
+                  top: 14.5%;
+                  left: 91.75%;
+                  isolation: isolate;
+            }
+
+            #minute {
+                  width:2.33rem;
+            }
+            #hour {     
+                  width: 1.5rem;
+            }
+
       </style>
       
 </head>
@@ -126,6 +150,10 @@
                   <div id="MusicInfo">
                         <h1 id="artistName">Steven Universe</h1>
                   </div>
+            </div>
+            <div id="Clock">
+                  <div id="minute" class="clockHands noise"></div>
+                  <div id="hour" class="clockHands noise"></div>
             </div>
             <img id="Background", src="background.jpeg"/>
       </div>
