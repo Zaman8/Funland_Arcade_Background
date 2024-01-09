@@ -28,6 +28,7 @@ function setClockHands() {
 //call function when loaded
 window.onload = () => {
     setClockHands();
+    setSize();
   };
 
 

@@ -39,10 +39,6 @@ function setSize() {
   midY = canvas.height - canvas.height / 4;
 }
 
-window.onload = () => {
-  setSize();
-};
-
 function livelyAudioListener(audioArray) 
 {
   //ensure that max value is actually 1 (usually is)
