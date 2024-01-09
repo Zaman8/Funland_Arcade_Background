@@ -21,6 +21,7 @@ function setClockHands() {
     minuteHand.style.transform = ['rotate(', minuteTurn, 'deg)'].join('');
     hourHand.style.transform = ['rotate(', hourTurn, 'deg)'].join('');
 
+    //only update hands every 10 seconds for performance
     setTimeout(setClockHands, 10000);
 }
 
